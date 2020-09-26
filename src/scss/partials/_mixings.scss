@@ -1,0 +1,25 @@
+// Transform
+@mixin transform-scale($scale_value) {
+  -moz-transform: scale($scale_value);
+  -webkit-transform: scale($scale_value);
+  -o-transform: scale($scale_value);
+  -ms-transform: scale($scale_value);
+  transform: scale($scale_value);
+}
+
+// Transitions
+@mixin transition-all-ease($duration) {
+  -webkit-transition: all $duration ease;
+  -moz-transition: all $duration ease;
+  -ms-transition: all $duration ease;
+  -o-transition: all $duration ease;
+  transition: all $duration ease;
+}
+
+// Animations
+@mixin fade-in-bottom($duration, $delay) {
+  -webkit-animation: fade-in-bottom $duration
+    cubic-bezier(0.39, 0.575, 0.565, 1) $delay both;
+  animation: fade-in-bottom $duration cubic-bezier(0.39, 0.575, 0.565, 1) $delay
+    both;
+}

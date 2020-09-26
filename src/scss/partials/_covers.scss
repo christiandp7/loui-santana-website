@@ -1,0 +1,125 @@
+.card.card-cover {
+  position: relative;
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+
+  .card-cover_img-wrapper {
+    text-align: center;
+    position: relative;
+    margin-bottom: 18px;
+    //overflow: hidden;
+
+    &:hover {
+      //cursor: pointer;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0;
+      background-color: #000;
+      @include transition-all-ease(0.8s);
+    }
+    &:hover::after {
+      opacity: 0.75;
+      @include transform-scale(1.06);
+    }
+
+    > img {
+      max-width: 100%;
+      margin: 0 auto;
+      @include transition-all-ease(0.8s);
+    }
+    &:hover > img {
+      @include transform-scale(1.06);
+    }
+
+    .card-cover_actions {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      @include transition-all-ease(0.4s);
+
+      .card-cover_actions-item {
+        text-decoration: none;
+        border-radius: 50%;
+        padding: 8px;
+        background-color: #fff;
+        color: $gray-600;
+        display: none;
+        margin: 18px 12px;
+        line-height: 1;
+        i {
+          font-size: 2.3em;
+          line-height: 1;
+          @include transition-all-ease(0.3s);
+        }
+        i.louicon-spotify {
+          &:hover {
+            color: $spotify-color;
+          }
+        }
+        i.louicon-brand-apple {
+          &:hover {
+            color: $apple-color;
+          }
+        }
+        i.louicon-youtube-play {
+          &:hover {
+            color: $youtube-color;
+          }
+        }
+        i.louicon-brand-soundcloud {
+          &:hover {
+            color: $soundcloud-color;
+          }
+        }
+      }
+
+      > div:nth-child(1) .card-cover_actions-item {
+        &:nth-child(1) {
+          @include fade-in-bottom(0.4s, 0.2s);
+        }
+        &:nth-child(2) {
+          @include fade-in-bottom(0.4s, 0.6s);
+        }
+      }
+      > div:nth-child(2) .card-cover_actions-item {
+        &:nth-child(1) {
+          @include fade-in-bottom(0.4s, 0.4s);
+        }
+        &:nth-child(2) {
+          @include fade-in-bottom(0.4s, 0.8s);
+        }
+      }
+    }
+    &:hover .card-cover_actions {
+      opacity: 1;
+    }
+    &:hover .card-cover_actions-item {
+      display: block;
+    }
+  }
+
+  .card-title {
+    margin-bottom: 0.12em;
+    cursor: default;
+  }
+  .card-text {
+    line-height: 1.4;
+    cursor: default;
+    text-transform: lowercase;
+  }
+}

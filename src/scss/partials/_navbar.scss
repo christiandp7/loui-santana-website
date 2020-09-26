@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #000;
+  min-height: $navbar-min-height;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+}
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 1px;
+}

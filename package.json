@@ -1,0 +1,12 @@
+{
+  "name": "loui-santana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch src/scss/index.scss public/css/index.css"
+  },
+  "keywords": [],
+  "author": "Christian Diaz Portela <christiandp7@gmail.com>",
+  "license": "MIT"
+}
