@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>Loui Santana</title>
   </head>
@@ -13,10 +13,10 @@
         <a href="/" class="navbar-brand">LOUI SANTANA</a>
         <ul class="nav justify-content-start">
           <li class="nav-item">
-            <a class="nav-link active" href="#listen-target">listen</a>
+            <a class="nav-link active" href="#listen-target" data-scrolloffset="80">listen</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#watch-target">watch</a>
+            <a class="nav-link" href="#watch-target" data-scrolloffset="80">watch</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">about</a>
@@ -25,7 +25,7 @@
             <a class="nav-link" href="#">shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">sign up</a>
+            <a class="nav-link" href="#newsletter-target">sign up</a>
           </li>
         </ul>
       </div>
@@ -40,10 +40,10 @@
     </div>
 
     <!-- Covers -->
-    <div id="listen-target" class="sec section-covers">
+    <div class="sec section-covers">
       <div class="gradient-bottom"></div>
       <div class="container">
-        <h2 class="sec-title" style="position: relative">listen</h2>
+        <h2 id="listen-target" class="sec-title" style="position: relative">listen</h2>
         <div class="row">
           <div class="col-6 col-sm-6 col-md-3">
             <div class="card card-cover">
@@ -448,9 +448,9 @@
     </div>
 
     <!-- Watch -->
-    <div id="watch-target" class="sec section-watch">
+    <div class="sec section-watch">
       <div class="container">
-        <h2 class="sec-title">watch</h2>
+        <h2 id="watch-target" class="sec-title">watch</h2>
       </div>
       <div class="section-watch__item bimini-bg">
         <div class="container">
@@ -568,7 +568,7 @@
     </div>
 
     <!-- Newsletter -->
-    <div class="sec section-newsletter">
+    <div id="newsletter-target" class="sec section-newsletter">
       <div class="newsletter">
         <h5>get email updates from</h5>
         <h1 class="big_name">LOUI SANTANA</h1>
@@ -607,5 +607,35 @@
         </li>
       </ul>
     </footer>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+
+        $('a[href="#"]').on('click', function(e) {
+          e.preventDefault();
+        });
+
+        $('a').on('click', function(e) {
+          if (this.hash !== "") {
+            e.preventDefault();
+            var hash = this.hash;
+            var scrollOffset = $(this).attr('data-scrolloffset') || 0;
+            //window.location.hash = hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - scrollOffset
+              }, 800, function(){
+                //
+            });
+          }
+          
+        })
+      })
+    </script>
+
+
   </body>
 </html>
