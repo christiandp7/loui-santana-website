@@ -10235,7 +10235,7 @@ h3 {
 }
 body {
   font-size: 0.8em;
-  background-color: #000a09;
+  background-color: #000;
   color: #fff;
 }
 
@@ -10272,7 +10272,7 @@ h6,
 .navbar {
   background-color: #000;
   min-height: 60px;
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 2000;
   top: 0;
@@ -10337,6 +10337,7 @@ h6,
 
 /* Newsletter */
 .section-newsletter {
+  background-color: #000a09;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -10347,7 +10348,6 @@ h6,
 /* BANNER */
 .section-banner {
   height: calc(100vh - 60px);
-  margin-top: 60px;
   background-image: url("../img/1.jpg");
   background-size: cover;
   background-position: center bottom;
@@ -10639,8 +10639,13 @@ h6,
   list-style: none;
   margin: 0;
   padding: 0;
-  -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 479px) {
+  .social {
+    display: none;
+  }
 }
 .social li a {
   display: block;
@@ -10679,13 +10684,23 @@ h6,
 }
 
 .footer {
-  background-color: transparent;
+  background-color: #000a09;
   padding: 50px 0;
   text-transform: uppercase;
 }
 
 .footer .nav-link {
   font-size: 0.8em;
+}
+
+.page {
+  padding: 40px 0;
+  min-height: calc(100vh - 60px);
+}
+
+.page-about {
+  padding-top: 5rem;
+  font-size: 1.5em;
 }
 
 /* ===================

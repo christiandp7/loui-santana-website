@@ -3,8 +3,9 @@
 @import "./partials/variables";
 @import "./bootstrap/bootstrap";
 
-// mixings
-@import "./partials/mixings";
+// mixins
+@import "./partials/mixins";
+@import "./partials/responsive";
 
 // Partials
 @import "./partials/settings";
@@ -17,6 +18,10 @@
 @import "./partials/social_media";
 @import "./partials/footer";
 
+//pages
+@import "./partials/pages";
+
+//custom
 @import "./partials/custom";
 
 @import "./partials/animations";
