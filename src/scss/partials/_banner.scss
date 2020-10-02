@@ -7,4 +7,27 @@
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
+
+  .loui-walking {
+    position: absolute;
+    top: 19%;
+    left: 29%;
+    width: 6%;
+    opacity: 0;
+    @include transition-all-ease(0.5s);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .ghost {
+    position: absolute;
+    top: 11%;
+    right: 31.6%;
+    width: 1.6%;
+    opacity: 0;
+    @include transition-all-ease(0.5s);
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
