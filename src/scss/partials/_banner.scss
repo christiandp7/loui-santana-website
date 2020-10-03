@@ -10,9 +10,9 @@
 
   .loui-walking {
     position: absolute;
-    top: 19%;
-    left: 29%;
-    width: 6%;
+    top: 13%;
+    left: 22%;
+    width: 18%;
     opacity: 0;
     @include transition-all-ease(0.5s);
     &:hover {
@@ -21,9 +21,9 @@
   }
   .ghost {
     position: absolute;
-    top: 11%;
-    right: 31.6%;
-    width: 1.6%;
+    top: 5%;
+    right: 24.5%;
+    width: 16%;
     opacity: 0;
     @include transition-all-ease(0.5s);
     &:hover {
