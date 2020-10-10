@@ -18,16 +18,40 @@
     &:hover {
       opacity: 0.7;
     }
+
+    @include media-max-width($xl-breakpoint-max) {
+      top: 15vh;
+      left: 20vw;
+      width: 25em;
+    }
+    @include media-max-width($lg-breakpoint-max) {
+      top: 25vh;
+      left: 16vw;
+      width: 20em;
+    }
+    @include media-max-width($md-breakpoint-max) {
+      top: 25vh;
+      left: 0;
+      width: 25em;
+    }
+    @include media-max-width($sm-breakpoint-max) {
+      top: 25vh;
+      left: -10vw;
+      width: 20em;
+    }
   }
   .ghost {
     position: absolute;
-    top: 5%;
-    right: 24.5%;
-    width: 16%;
+    top: 10vh;
+    right: 21vw;
+    width: 24em;
     opacity: 0;
     @include transition-all-ease(0.5s);
     &:hover {
       opacity: 1;
+    }
+    @include media-max-width($lg-breakpoint-max) {
+      display: none;
     }
   }
 }

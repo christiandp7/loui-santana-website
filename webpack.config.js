@@ -80,6 +80,7 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: "css/index.[hash].css",
+      chunkFilename: 'css/chunk.[id].css', // Esta linea es nueva no se ha probado aun
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/index.html"),

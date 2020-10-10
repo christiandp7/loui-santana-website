@@ -3,12 +3,139 @@
   min-height: $navbar-min-height;
   position: sticky;
   width: 100%;
-  z-index: 2000;
+  z-index: 100;
   top: 0;
   left: 0;
+
+  .nav {
+    @include media-max-width($md-breakpoint-max) {
+      display: none;
+    }
+  }
+  .mobile-nav__button {
+    background: none;
+    border: none;
+    padding: 5px;
+    display: none;
+    @include media-max-width($md-breakpoint-max) {
+      display: block;
+    }
+  }
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: "Sequel Wide Bold";
+    @include media-max-width($sm-breakpoint-max) {
+      font-size: 1.1rem;
+    }
+  }
 }
-.navbar-brand {
-  font-weight: 700;
-  letter-spacing: 2px;
-  font-family: "Sequel Wide Bold";
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 200; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  .sidenav__closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+  }
+
+  .nav li {
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    a {
+      font-size: 1.3rem;
+    }
+  }
+
+  .sidenav__social {
+    list-style: none;
+    padding: 5px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    width: 260px;
+
+    li {
+      margin: 6px 8px;
+      a {
+        font-size: 1.6rem;
+        padding: 2px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#background-overlay {
+  position: fixed;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: none;
+  transition: 1s all ease;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/*#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}*/
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+.hamburguer-icon {
+  width: 28px;
+  //height: 16px;
+
+  position: relative;
+  margin: 0 auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    //position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $primary;
+    border-radius: 2px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 5px;
+    }
+  }
 }

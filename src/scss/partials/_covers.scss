@@ -3,6 +3,9 @@
   border: 0;
   color: #fff;
   background-color: transparent;
+  @include media-max-width($sm-breakpoint-max) {
+    margin-bottom: 15px;
+  }
 
   .card-cover_img-wrapper {
     text-align: center;
@@ -116,6 +119,11 @@
   .card-title {
     margin-bottom: 0.12em;
     cursor: default;
+  }
+  .card-body {
+    @include media-max-width($sm-breakpoint-max) {
+      padding: 0.25rem;
+    }
   }
   .card-text {
     line-height: 1.4;

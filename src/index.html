@@ -3,16 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <meta name="description" content="Loui Santana is an emerging singer & songwriter comingin into the scene, hoping to bring his original taste and perspective into the genre.">
+
+    <meta property='og:title' content='Loui Santana' />
+    <meta property='og:type' content='website' />
+    <meta property='og:description' content='Loui Santana is an emerging singer & songwriter comingin into the scene, hoping to bring his original taste and perspective into the genre.' />
+    <meta property='og:url' content='https://louisantan.com/' />
+    <meta property='og:image' content='https://louisantan.com/assets/img/superior-watch.jpg' />
+    <meta property='og:image:secure_url' content='https://louisantan.com/assets/img/superior-watch.jpg' />
+    <meta property='og:image:type' content='image/jpeg' />
+    <meta property='og:image:width' content='2049' />
+    <meta property='og:image:height' content='1222' />
+    <meta property='og:image:alt' content='Loui Santana is an emerging singer & songwriter comingin into the scene, hoping to bring his original taste and perspective into the genre.' />
+    <meta name='twitter:site' content='Loui Santana' />
+    <meta name='twitter:title' content='Loui Santana' />
+    <meta name='twitter:description' content='Loui Santana is an emerging singer & songwriter comingin into the scene, hoping to bring his original taste and perspective into the genre.' />
+    <meta name='twitter:image' content='https://louisantan.com/assets/img/superior-watch.jpg' />
+    <meta name='twitter:card' content='summary_large_image' />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179889021-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
+    /*window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-179889021-1');
+    gtag('config', 'UA-179889021-1');*/
     </script>
+
+    <link rel="icon" href="img/favicon.png" type="image/png" />
     <title>Loui Santana</title>
   </head>
   <body>
@@ -43,9 +62,106 @@
             <a class="nav-link" href="#newsletter-target">sign up</a>
           </li>
         </ul>
+        <button class="mobile-nav__button justify-content-start">
+          <div class="hamburguer-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
       </div>
     </nav>
 
+    <!-- Overlay -->
+    <div id="background-overlay"></div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-sidenav" class="sidenav">
+      <a href="javascript:void(0)" class="sidenav__closebtn">&times;</a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            href="#listen-target"
+            data-scrolloffset="80"
+            >listen</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#watch-target" data-scrolloffset="60"
+            >watch</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">about</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="#">shop</a>
+        </li>--> 
+        <li class="nav-item">
+          <a class="nav-link" href="#newsletter-target">sign up</a>
+        </li>
+      </ul>
+      <ul class="sidenav__social">
+        <li>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/kydloui"
+            class="facebook-icon"
+            href="#"
+          >
+            <i class="louicon-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            target="_blank"
+            href="https://instagram.com/loui.santana?igshid=edrsdh2ltlfr"
+            class="instagram-icon"
+            href="#"
+          >
+            <i class="louicon-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://open.spotify.com/artist/6QoAK6MFPyiqmoTdFTsjlh"
+            target="_blank"
+            class="spotify-icon"
+            href="#"
+          >
+            <i class="louicon-spotify"></i>
+          </a>
+        </li>
+        <li>
+          <a class="twitter-icon" href="#">
+            <i class="louicon-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/channel/UC9_ewyrRRIr3VkF8CnbFp3w"
+            target="_blank"
+            class="youtube-icon"
+            href="#"
+          >
+            <i class="louicon-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://soundcloud.com/louisantana"
+            target="_blank"
+            class="soundcloud-icon"
+            href="#"
+          >
+            <i class="louicon-soundcloud"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social Media left bar -->
     <ul class="social">
       <li>
         <a
@@ -522,122 +638,81 @@
 
     <!-- Watch -->
     <div class="sec section-watch">
-      <div class="container">
-        <h2 id="watch-target" class="sec-title">watch</h2>
+      <div class="container watch-title__container">
+        <h2 id="watch-target" class="sec-title watch-title">watch</h2>
       </div>
-      <div class="section-watch__item bimini-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/qY8_bjWMJPs"
-                >BIMINI</a
-              >
-            </div>
-            <div class="col-8">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/qY8_bjWMJPs"
-                ><small>loui santana</small></a
-              >
+      <a target="_blank" href="https://youtu.be/qY8_bjWMJPs">
+        <div class="section-watch__item bimini-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <span class="nav-link">BIMINI</span
+                >
+              </div>
+              <div class="col-8">
+                <span class="nav-link"><small>loui santana</small></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-watch__item loui-fi-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/b56_ynfZ_4M"
-                >LOUI-FI</a
-              >
-            </div>
-            <div class="col-8">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/b56_ynfZ_4M"
-                ><small
-                  >saul paulino <br />
-                  ft. loui santana</small
-                ></a
-              >
+      </a>
+      <a target="_blank" href="https://youtu.be/b56_ynfZ_4M">
+        <div class="section-watch__item loui-fi-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <span class="nav-link">LOUI-FI</span>
+              </div>
+              <div class="col-8">
+                <span class="nav-link"><small>saul paulino <br />
+                    ft. loui santana</small></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-watch__item rumores-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/gt060S-L9Wk"
-                >RUMORES</a
-              >
-            </div>
-            <div class="col-8">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/gt060S-L9Wk"
-                ><small>loui santana</small></a
-              >
+      </a>
+      <a target="_blank" href="https://youtu.be/gt060S-L9Wk">
+        <div class="section-watch__item rumores-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <span class="nav-link">RUMORES</span>
+              </div>
+              <div class="col-8">
+                <span class="nav-link"><small>loui santana</small></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-watch__item otl-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/GshNfVRrJJ0"
-                >OTL</a
-              >
-            </div>
-            <div class="col-8">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/GshNfVRrJJ0"
-                ><small>loui santana</small></a
-              >
+      </a>
+      <a target="_blank" href="https://youtu.be/GshNfVRrJJ0">
+        <div class="section-watch__item otl-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <span class="nav-link">OTL</span>
+              </div>
+              <div class="col-8">
+                <span class="nav-link"><small>loui santana</small></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="section-watch__item superior-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-4">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/9yhPfl8nzIw"
-                >SUPERIOR</a
-              >
-            </div>
-            <div class="col-8">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://youtu.be/9yhPfl8nzIw"
-                ><small>loui santana</small></a
-              >
+      </a>
+      <a target="_blank" href="https://youtu.be/9yhPfl8nzIw">
+        <div class="section-watch__item superior-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-4">
+                <span class="nav-link">SUPERIOR</span>
+              </div>
+              <div class="col-8">
+                <span class="nav-link"><small>loui santana</small></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </a>
     </div>
 
     <!-- Newsletter -->
@@ -645,14 +720,15 @@
       <div class="newsletter">
         <h5>get email updates from</h5>
         <h1 class="big_name">LOUI SANTANA</h1>
-        <form>
+        <form id="signup-form" name="newsletter" method="POST" data-netlify="true" data-netlify-recaptcha="true">
           <input
             type="email"
             class="form-control"
             placeholder="example@gmail.com"
             id="exampleInputEmail1"
             aria-describedby="email"
-          /><button type="button" class="btn btn-primary">send</button>
+            name="email"
+          /><button type="submit" class="btn btn-primary">send</button>
         </form>
       </div>
     </div>
@@ -728,6 +804,36 @@
             );
           }
         });
+
+
+
+        function openNav() {
+          document.getElementById("mobile-sidenav").style.width = "260px";
+          document.getElementById("background-overlay").style.display = "block";
+        }
+
+        function closeNav() {
+          document.getElementById("mobile-sidenav").style.width = "0";
+          document.getElementById("background-overlay").style.display = "none";
+        }
+
+
+        $('.mobile-nav__button').click(function() { openNav() });
+        $('.sidenav__closebtn').click(function() { closeNav() });
+        $('#background-overlay').click(function() { closeNav() });
+        
+
+        /*$("#signup-form").submit(function(e) {
+          e.preventDefault();
+
+          var $form = $(this);
+          $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+          });
+        });*/
+
+
+
       });
     </script>
   </body>
