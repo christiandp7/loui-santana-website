@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJsPlugin = require("terser-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -78,6 +79,11 @@ module.exports = {
     extensions: ['.js', '.scss']
   },    
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/img/loui-santana-og-image.jpg', to: 'assets/img' },
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: "css/index.[hash].css",
       chunkFilename: 'css/chunk.[id].css', // Esta linea es nueva no se ha probado aun
