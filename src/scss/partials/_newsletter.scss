@@ -5,6 +5,10 @@
 
   form {
     margin-top: 15px;
+    .captcha-container {
+      display: inline-block;
+      margin-top: 25px;
+    }
   }
   button,
   input[type="email"] {
