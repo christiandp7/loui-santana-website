@@ -13,10 +13,10 @@
     margin-bottom: 18px;
     //overflow: hidden;
 
-    &:hover {
+    /*&:hover {
       //cursor: pointer;
-    }
-    &::after {
+    }*/
+    &::before {
       content: "";
       position: absolute;
       width: 100%;
@@ -28,7 +28,7 @@
       background-color: #000;
       @include transition-all-ease(0.8s);
     }
-    &:hover::after {
+    &:hover::before {
       opacity: 0.75;
       @include transform-scale(1.06);
     }
@@ -51,8 +51,10 @@
       height: 100%;
       top: 0;
       left: 0;
-      z-index: 2;
+      z-index: 1;
       opacity: 0;
+      //display: none;
+      overflow: hidden;
       @include transition-all-ease(0.4s);
 
       .card-cover_actions-item {
@@ -63,7 +65,8 @@
         color: $gray-600;
         display: none;
         margin: 18px 12px;
-        line-height: 1;
+        visibility: hidden;
+
         i {
           font-size: 2.3em;
           line-height: 1;
@@ -110,9 +113,10 @@
     }
     &:hover .card-cover_actions {
       opacity: 1;
-    }
-    &:hover .card-cover_actions-item {
-      display: block;
+      .card-cover_actions-item {
+        display: block;
+        visibility: visible;
+      }
     }
   }
 
@@ -123,6 +127,9 @@
   .card-body {
     @include media-max-width($sm-breakpoint-max) {
       padding: 0.25rem;
+    }
+    @include media-min-max-width(768px, 991px) {
+      padding: 0.1rem;
     }
   }
   .card-text {

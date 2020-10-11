@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin media-min-max-width($min-breakpoint, $max-breakpoint) {
+  @media (min-width: $min-breakpoint) and (max-width: $max-breakpoint) {
+    @content;
+  }
+}

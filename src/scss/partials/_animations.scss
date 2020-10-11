@@ -5,8 +5,8 @@
  */
 @-webkit-keyframes fade-in-bottom {
   0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+    -webkit-transform: translateY(13em);
+    transform: translateY(13em);
     opacity: 0;
   }
   100% {
@@ -17,8 +17,8 @@
 }
 @keyframes fade-in-bottom {
   0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+    -webkit-transform: translateY(13em);
+    transform: translateY(13em);
     opacity: 0;
   }
   100% {
