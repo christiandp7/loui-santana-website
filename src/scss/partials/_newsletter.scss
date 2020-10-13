@@ -65,3 +65,70 @@
   @media (max-width: 320px) {
   }
 }
+
+.modal-newsletter {
+  .modal-content {
+    background-color: $bg-color;
+    .close {
+      color: $primary;
+    }
+    .modal-header {
+      padding-bottom: 0;
+      border-bottom: 0;
+      .modal-title {
+        text-align: center;
+        width: 100%;
+      }
+    }
+    .modal-body {
+      //padding-top: 0;
+      p {
+        padding-left: 3%;
+      }
+    }
+  }
+}
+
+#mc_embed_signup {
+  #mc-embedded-subscribe-form {
+    .clear {
+      margin-bottom: 15px;
+    }
+    .mc-field-group {
+      input {
+        background-color: $bg-color;
+        border: solid 2px;
+        border-radius: 0;
+        color: $primary;
+        &.mce_inline_error {
+          border-color: #c41616;
+        }
+        &:focus {
+          border-radius: 0;
+          border-width: 2px;
+        }
+      }
+    }
+
+    input[type="submit"],
+    button.btn {
+      border-radius: 0;
+      background-color: transparent;
+      border: solid 2px $primary;
+      line-height: 1;
+      padding-bottom: 1px;
+      height: 38px;
+      color: #fff;
+      font-size: 1.2em;
+
+      &:focus {
+        border: solid 2px $primary;
+        border-radius: 0;
+      }
+      &:hover {
+        background-color: $primary;
+        color: $bg-color;
+      }
+    }
+  }
+}
