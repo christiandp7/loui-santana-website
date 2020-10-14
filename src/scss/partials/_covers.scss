@@ -72,23 +72,17 @@
           line-height: 1;
           @include transition-all-ease(0.3s);
         }
-        i.louicon-spotify {
-          &:hover {
+        &:hover {
+          i.louicon-spotify {
             color: $spotify-color;
           }
-        }
-        i.louicon-brand-apple {
-          &:hover {
+          i.louicon-brand-apple {
             color: $apple-color;
           }
-        }
-        i.louicon-youtube-play {
-          &:hover {
+          i.louicon-youtube-play {
             color: $youtube-color;
           }
-        }
-        i.louicon-brand-soundcloud {
-          &:hover {
+          i.louicon-brand-soundcloud {
             color: $soundcloud-color;
           }
         }
