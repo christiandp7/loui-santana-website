@@ -15,6 +15,13 @@
   -o-transition: all $duration ease;
   transition: all $duration ease;
 }
+@mixin transition-bg-ease($duration) {
+  -webkit-transition: background $duration ease;
+  -moz-transition: background $duration ease;
+  -ms-transition: background $duration ease;
+  -o-transition: background $duration ease;
+  transition: background $duration ease;
+}
 
 // Animations
 @mixin fade-in-bottom($duration, $delay) {

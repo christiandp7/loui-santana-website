@@ -11,9 +11,14 @@
   width: 100%;
   height: 120px;
   padding-top: 40px;
-  background-size: cover;
+  background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
+  @include transition-all-ease(0.5s);
+
+  &:hover {
+    background-size: 106%;
+  }
 
   &.bimini-bg {
     background-image: url("../img/bimini-watch_2.jpg");
