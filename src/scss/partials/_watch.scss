@@ -10,6 +10,12 @@
   }
 }
 
+.section-watch > a:hover {
+  @include media-max-width($md-breakpoint-max) {
+    text-decoration: none;
+  }
+}
+
 .section-watch__item {
   width: 100%;
   height: 120px;
