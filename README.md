@@ -1,5 +1,12 @@
 # Loui Santan Website
 
-> npm run sass:watch
+Website for Loui Santana artist, handcrafted in HTML, CSS and jQuery.
+Need to change jQuery by vanilla JS.
 
-## Need to make a build for production
+## Run
+
+> npm start
+
+## Build
+
+> npm run build
