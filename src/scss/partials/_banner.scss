@@ -3,12 +3,12 @@
   //height: calc(100vh - $navbar-min-height);
   height: calc(100vh - 60px);
   //margin-top: 60px;
-  background-image: url("../img/1_2.jpg");
+  background-image: url("../img/banner_new.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
 
-  .loui-walking {
+  /*.loui-walking {
     position: absolute;
     top: 13%;
     left: 22%;
@@ -52,6 +52,18 @@
     }
     @include media-max-width($lg-breakpoint-max) {
       display: none;
+    }
+  }*/
+
+  .loui_bending_down {
+    position: absolute;
+    top: 36%;
+    left: 40%;
+    width: 19%;
+    opacity: 0;
+    @include transition-all-ease(0.5s);
+    &:hover {
+      opacity: 1;
     }
   }
 }
