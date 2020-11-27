@@ -60,10 +60,27 @@
     top: 36%;
     left: 40%;
     width: 19%;
-    opacity: 0;
+    opacity: 1;
     @include transition-all-ease(0.5s);
     &:hover {
       opacity: 1;
+    }
+
+    @include media-max-width($lg-breakpoint-max) {
+      top: 40%;
+      left: 40%;
+      width: 21%;
+    }
+    @include media-max-width($md-breakpoint-max) {
+      top: 25vh;
+      left: 32%;
+      width: 20em;
+    }
+    @include media-max-width($sm-breakpoint-max) {
+      top: 38vh;
+      //left: -10vw;
+      left: 18%;
+      width: 16em;
     }
   }
 }
